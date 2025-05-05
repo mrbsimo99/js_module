@@ -1,4 +1,4 @@
-// Esercizio 9 //
+// Esercizio 9 - Richiesta di input corretto //
 let parola;
 
 do {
