@@ -1,4 +1,4 @@
-// Esercizio 12 - switch
+// Esercizio 11 - if, else & if
 let score = parseInt(prompt('Inserisci il tuo voto'));
 
 if (score >= 90 && score <= 100) {

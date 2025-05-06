@@ -1,4 +1,4 @@
-// Esercizio 12 - if,else & else-if
+// Esercizio 12 - switch
 let score = parseInt(prompt("Inserisci il tuo voto"));
 
 switch (true) {
