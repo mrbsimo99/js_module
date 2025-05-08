@@ -18,8 +18,7 @@ console.log(bocciatoPierchicco);
 const expenses = [400, 50, 20, 80];
 // 400 + 50 + 20 + 80
 const totalExpenses = expenses.reduce(
-  (accumulator, current) => accumulator + current
-);
+  (accumulator, current) => accumulator + current , 0 );
 console.log(totalExpenses);
 
 const words = ["banana", "apple", "cherry", "date"];
