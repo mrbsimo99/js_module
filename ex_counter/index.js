@@ -1,20 +1,20 @@
 // Esercizio 24 Counter
-function createCounter() {
-  let count = 4;
-  
-  return {
-    increment: function () {
-      count += 1;
-      return count;
-    },
-    decrement: function () {
-      count--;
-      return count;
-    },
-  };
+function createCounter(initialValue) {
+  let count = initialValue;
+
+  function increment() {
+    count++;
+    return count;
+  }
+
+  function decrement() {
+    count--;
+    return count;
+  }
+  return { increment, decrement };
 }
+const counter = createCounter(5);
 
-const counter = createCounter();
+console.log(counter.increment());
+console.log(counter.decrement());
 
-console.log(counter.increment(4));
-console.log(counter.decrement(5));
