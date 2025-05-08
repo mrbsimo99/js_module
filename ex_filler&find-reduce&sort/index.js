@@ -15,13 +15,14 @@ console.log(passedStudents);
 console.log(bocciatoPierchicco);
 
 // esercizio 30 reduce & sort
-const expenses = [400,50,20,80];
-// 400 + 50 + 20 + 80 
-const totalExpenses = expenses.reduce ((accumulator, current) => accumulator + current,
-); 
-console.log(totalExpenses)
+const expenses = [400, 50, 20, 80];
+// 400 + 50 + 20 + 80
+const totalExpenses = expenses.reduce(
+  (accumulator, current) => accumulator + current
+);
+console.log(totalExpenses);
 
 const words = ["banana", "apple", "cherry", "date"];
 words.sort();
 
-console.log(words)
+console.log(words);
