@@ -1,12 +1,12 @@
 // Esercizio 23 Persistenza delle variabili locali
 
-function outerFunction (x) {
-    function innerFunction(y) {
-        return x + y;
-    }
-    return innerFunction;
+function outerFunction(x, initialValue) {
+  let result = initialValue;
+
+  function innerFunction(y) {
+    result += y;
+    return result;
+  }
+  return innerFunction;
 }
-console.log(outerFunction(10)(5));
-
-
-
+console.log(outerFunction(10, 5)(5));
