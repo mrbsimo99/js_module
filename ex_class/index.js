@@ -94,7 +94,27 @@ console.log(Auto2.mostraEtà());
 console.log(Auto3.mostraEtà());
 
 // Metodo protetto 
-const Tesla = new Elettrica ("Tesla", "Model 3", 2025, 500, 500)
+const Tesla = new Elettrica ("Tesla", "Model 3", 2025, 200000, 500)
 console.log(Tesla)
 console.log(Tesla._controllaChilometri(200000))
+
+// Confronta km
+
+// Contatore
+
+// Incrementa contatore
+
+// Aggiungi km
+
+// Mostra contatore
+
+// Getter
+
+// Setter
+
+// Camion
+
+// Carico Massimo
+
+// Verifica istanza 
 
