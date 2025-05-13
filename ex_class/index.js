@@ -12,7 +12,7 @@ class Automobile {
         this.modello = modello;
         this.anno = anno;
         this.chilometraggio = chilometraggio;
-        this._controllaChilometri = _controllaChilometri; 
+        this._controllaChilometri = 0; 
     }
 
     aggiungiChilometri(km) {
@@ -38,8 +38,8 @@ class Automobile {
         return this.marca + " " + this.modello + " :" + età + " anni";
     }
 
-    set _controllaChilometri(value) {
-        if (value > 100000)
+    set _controllaChilometri(km) {
+        if (km > 100000)
             return "Attenzione, superati i 100000km";
     }
 
