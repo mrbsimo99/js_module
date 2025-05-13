@@ -38,8 +38,8 @@ class Automobile {
         return this.marca + " " + this.modello + " :" + età + " anni";
     }
 
-    _controllaChilometri() {
-        if (this.chilometraggio > 100000)
+    set _controllaChilometri(value) {
+        if (value > 100000)
             return "Attenzione, superati i 100000km";
     }
 
