@@ -63,3 +63,11 @@ let Auto3 = new Elettrica("Alfa", "Giulia", 2020, 50000, 100);
 console.log(Auto3.descrizione());
 Auto3.ricarica(400);
 console.log(Auto3.descrizione());
+
+Automobile.prototype.saluto = function () {
+    return "Ciao, questa è la macchina selezionata:" + " " + this.marca + " " + this.modello;
+};
+
+console.log(Auto1.saluto());
+console.log(Auto2.saluto());
+console.log(Auto3.saluto());
