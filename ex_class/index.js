@@ -5,12 +5,14 @@ class Automobile {
     modello = ""
     anno = 0
     chilometraggio = 0
+    _controllaChilometri = 0
 
-    constructor(marca, modello, anno, chilometraggio) {
+    constructor(marca, modello, anno, chilometraggio, _controllaChilometri) {
         this.marca = marca;
         this.modello = modello;
         this.anno = anno;
         this.chilometraggio = chilometraggio;
+        this._controllaChilometri = _controllaChilometri; 
     }
 
     aggiungiChilometri(km) {
@@ -26,6 +28,25 @@ class Automobile {
     descrizione() {
         return this.marca + " " + this.modello + " " + this.anno + " " + this.chilometraggio + " km";
     }
+
+    #calcolaEtà() {
+        return 2025 - this.anno;
+    }
+
+    mostraEtà() {
+        const età = this.#calcolaEtà();
+        return this.marca + " " + this.modello + " :" + età + " anni";
+    }
+
+    _controllaChilometri() {
+        if (this.chilometraggio > 100000)
+            return "Attenzione, superati i 100000km";
+    }
+
+    get _controllaChilometri () {
+        return this._controllaChilometri();
+    }
+
 }
 let Auto1 = new Automobile("Alfa", "Mto", 2011);
 console.log(Auto1.descrizione());
@@ -71,3 +92,12 @@ Automobile.prototype.saluto = function () {
 console.log(Auto1.saluto());
 console.log(Auto2.saluto());
 console.log(Auto3.saluto());
+
+// Metodo privato
+console.log(Auto1.mostraEtà());
+console.log(Auto2.mostraEtà());
+console.log(Auto3.mostraEtà());
+
+// Metodo protetto 
+
+console.log(Auto3._controllaChilometri());
