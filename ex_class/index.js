@@ -32,6 +32,7 @@ console.log(Auto1.descrizione());
 
 // Aggiungi metodo & proprietà
 let Auto2 = new Automobile("Alfa", "Giulietta", 2010, 120000)
+
 console.log(Auto2.mostraChilometraggio());
 Auto2.aggiungiChilometri(150);
 console.log(Auto2.mostraChilometraggio());
@@ -61,4 +62,4 @@ class Elettrica extends Automobile {
 let Auto3 = new Elettrica("Alfa", "Giulia", 2020, 50000, 100);
 console.log(Auto3.descrizione());
 Auto3.ricarica(400);
-console.log(Auto3.descrizione())
+console.log(Auto3.descrizione());
