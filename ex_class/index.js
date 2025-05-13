@@ -20,7 +20,7 @@ class Automobile {
     }
 
     mostraChilometraggio() {
-        return "Chilometraggio attuale: " + this.chilometraggio +" km";
+        return "Chilometraggio attuale: " + this.chilometraggio + " km";
     }
 
     descrizione() {
@@ -39,4 +39,26 @@ console.log(Auto2.descrizione());
 
 
 // Sottoclasse Elettrica 
+class Elettrica extends Automobile {
+    autonomia = 0
 
+    constructor(marca, modello, anno, chilometraggio, autonomia) {
+        super(marca, modello, anno, chilometraggio);
+        this.autonomia = autonomia;
+    }
+
+    descrizione() {
+        return super.descrizione() + ", autonomia: " + this.autonomia + " km";
+    }
+
+    ricarica(km) {
+        if (km > 0) {
+            this.autonomia += km;
+        }
+    }
+}
+
+let Auto3 = new Elettrica("Alfa", "Giulia", 2020, 50000, 100);
+console.log(Auto3.descrizione());
+Auto3.ricarica(400);
+console.log(Auto3.descrizione())
