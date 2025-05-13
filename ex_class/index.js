@@ -5,14 +5,12 @@ class Automobile {
     modello = ""
     anno = 0
     chilometraggio = 0
-    _controllaChilometri = 0
 
-    constructor(marca, modello, anno, chilometraggio, _controllaChilometri) {
+    constructor(marca, modello, anno, chilometraggio) {
         this.marca = marca;
         this.modello = modello;
         this.anno = anno;
         this.chilometraggio = chilometraggio;
-        this._controllaChilometri = 0; 
     }
 
     aggiungiChilometri(km) {
@@ -30,7 +28,8 @@ class Automobile {
     }
 
     #calcolaEtà() {
-        return 2025 - this.anno;
+        const year = new Date().getFullYear()
+        return year - this.anno;
     }
 
     mostraEtà() {
@@ -38,13 +37,9 @@ class Automobile {
         return this.marca + " " + this.modello + " :" + età + " anni";
     }
 
-    set _controllaChilometri(km) {
+    _controllaChilometri(km) {
         if (km > 100000)
             return "Attenzione, superati i 100000km";
-    }
-
-    get _controllaChilometri () {
-        return this._controllaChilometri();
     }
 
 }
@@ -99,5 +94,7 @@ console.log(Auto2.mostraEtà());
 console.log(Auto3.mostraEtà());
 
 // Metodo protetto 
+const Tesla = new Elettrica ("Tesla", "Model 3", 2025, 500, 500)
+console.log(Tesla)
+console.log(Tesla._controllaChilometri(200000))
 
-console.log(Auto3._controllaChilometri());
