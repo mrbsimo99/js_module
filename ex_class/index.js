@@ -163,9 +163,9 @@ console.log(Auto1.contatoreChiamate());
 console.log(Auto1.getChilometraggio);
 
 // Setter
-Auto1.setChilometraggiochilometraggio = 65000;
+Auto1.setChilometraggio = 65000;
 console.log(Auto1.mostraChilometraggio())
-Auto2.setChilometraggiochilometraggio = 25000;
+Auto2.setChilometraggio = 25000;
 console.log(Auto2.mostraChilometraggio())
 
 // Camion // Carico Massimo
