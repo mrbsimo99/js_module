@@ -18,3 +18,19 @@ let [nome, cognome, età, professione, stato = "celibe"] = persona;
 
 console.log(nome, cognome, età, professione , stato)
 
+
+// Copia di un array
+
+const numbers = [1, 3, 5, 7, 9]
+const OddNumbers = [...numbers]
+
+console.log(numbers)
+console.log(OddNumbers)
+
+// Unione di due array
+
+const EvenNumbers = [2, 4, 6, 8, 10]
+const AllNumbers = [...OddNumbers, ...EvenNumbers]
+
+console.log(AllNumbers)
+

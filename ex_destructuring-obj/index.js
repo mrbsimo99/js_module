@@ -25,3 +25,19 @@ console.log(
 let {nome : prima, tipo : seconda, mossa : terza, debolezza : quarta} = Pokèmon
 
 console.log(prima,seconda,terza,quarta)
+
+
+// Destructuring con valori predefiniti
+
+let Automobile = {
+    marca:"Alfa", 
+    modello:"Mto", 
+}
+
+let {marca, modello, anno= 0, chilometraggio= 0} = Automobile;
+
+anno = 2011;
+chilometraggio = 200000;
+
+console.log(marca, modello, anno, chilometraggio)
+
