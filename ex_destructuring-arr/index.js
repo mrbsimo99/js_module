@@ -12,3 +12,9 @@ console.log(primo,terzo)
 
 // Destructuring con valori predefiniti
 
+let persona = ["Mario", "Verdi", 28, "Barista"];
+
+let [nome, cognome, età, professione, stato = "celibe"] = persona;
+
+console.log(nome, cognome, età, professione , stato)
+
