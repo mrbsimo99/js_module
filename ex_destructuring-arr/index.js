@@ -34,3 +34,12 @@ const AllNumbers = [...OddNumbers, ...EvenNumbers]
 
 console.log(AllNumbers)
 
+// Destructuring array con rest operator
+
+const arr = [2, 4, 6, 8, 10]
+
+let [valore1, valore2, ...altriValori] = arr;
+
+console.log(valore1)
+console.log(valore2)
+console.log(...altriValori)
