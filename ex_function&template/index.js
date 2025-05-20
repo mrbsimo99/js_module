@@ -46,3 +46,17 @@ console.log(10, "Ciao", [2, 4, 6]);
 
 let mioOggetto = {marca: "Alfa", modello: "Mito"};
 console.log(mioOggetto)
+
+// Utilizzare console.error e console.warn
+
+const eta = 16;
+const Pegi = "PEGI 18"; 
+
+if (Pegi === "PEGI 18" && eta < 16) {
+  console.error("Errore: sei troppo giovane");
+} else if (Pegi === "PEGI 18" && eta < 18) {
+  console.warn("Avviso: il gioco è classificato PEGI 18. Contiene contenuti inappropriati.");
+}
+
+// Utilizzare console.table e console.group
+
