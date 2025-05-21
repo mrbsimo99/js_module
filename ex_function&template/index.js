@@ -44,13 +44,13 @@ console.log(Persona4(QuartaPersona));
 
 console.log(10, "Ciao", [2, 4, 6]);
 
-let mioOggetto = {marca: "Alfa", modello: "Mito"};
+let mioOggetto = { marca: "Alfa", modello: "Mito" };
 console.log(mioOggetto)
 
 // Utilizzare console.error e console.warn
 
 const eta = 16;
-const Pegi = "PEGI 18"; 
+const Pegi = "PEGI 18";
 
 if (Pegi === "PEGI 18" && eta < 16) {
   console.error("Errore: sei troppo giovane");
@@ -60,3 +60,35 @@ if (Pegi === "PEGI 18" && eta < 16) {
 
 // Utilizzare console.table e console.group
 
+console.table([{ nome: "Simone", cognome: "Morabito" },
+{ nome: "Antonino", cognome: "Ambrogio", },
+{ nome: "Domenico", cognome: "Mazza" }
+])
+
+console.group("Saluti");
+console.log("Buongiorno")
+console.log("Ciao");
+console.log("Buonasera");
+console.groupEnd();
+console.log("Fine Saluti")
+
+
+// Utilizzare set Timeout
+
+function saluto () {
+  console.log("Benvenuto");
+}
+
+setTimeout(saluto, 3000);
+
+// Utilizzare setInterval
+
+const salutaUtente = setInterval(() =>
+console.log("Benvenuto Utente"), 2000);
+
+setTimeout(() => {clearInterval(salutaUtente); console.log("Stop");}, 5000);
+
+const salutaGianfranco = setInterval(() =>
+  console.log("Benvenuto Gianfranco"), 1000);
+
+setTimeout(() => {clearInterval(salutaGianfranco); console.log("Addio Gianfranco");}, 5000);
