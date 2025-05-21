@@ -75,7 +75,7 @@ console.log("Fine Saluti")
 
 // Utilizzare set Timeout
 
-function saluto () {
+function saluto() {
   console.log("Benvenuto");
 }
 
@@ -84,11 +84,41 @@ setTimeout(saluto, 3000);
 // Utilizzare setInterval
 
 const salutaUtente = setInterval(() =>
-console.log("Benvenuto Utente"), 2000);
+  console.log("Benvenuto Utente"), 2000);
 
-setTimeout(() => {clearInterval(salutaUtente); console.log("Stop");}, 5000);
+setTimeout(() => { clearInterval(salutaUtente); console.log("Stop"); }, 5000);
 
 const salutaGianfranco = setInterval(() =>
   console.log("Benvenuto Gianfranco"), 1000);
 
-setTimeout(() => {clearInterval(salutaGianfranco); console.log("Addio Gianfranco");}, 5000);
+setTimeout(() => { clearInterval(salutaGianfranco); console.log("Addio Gianfranco"); }, 5000);
+
+// Gestione di un errore semplice
+const division = (num1, num2) => {
+  try {
+    if (num1 === 0 || num2 === 0) {
+      throw new Error("Non puoi dividere per 0")
+
+    }
+    let risultato = num1 / num2;
+    console.log(` Risultato = ${risultato}`)
+  } catch (error) {
+    console.log(error.message)
+  }
+}
+
+division(10,5)
+
+// Gestione di più tipi di errori
+
+const operation = () => {
+  try {
+    
+  } catch (error) {
+    
+  }
+}
+
+
+
+// Uso di finally per eseguire codice indipendente dal risultato
