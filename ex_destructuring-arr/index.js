@@ -2,9 +2,9 @@
 
 let numeri = [1 , 3, 5, 9, 12, 18]; 
 
-let [primo, secondo, terzo, quarto, quinto, sesto] = numeri;
+let [primo,, terzo, quarto, quinto, sesto] = numeri;
 
-console.log(primo, secondo);
+console.log(primo, quarto);
 
 // Saltare elementi durante il destructuring 
 
