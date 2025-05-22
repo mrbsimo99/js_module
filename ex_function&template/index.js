@@ -121,8 +121,8 @@ const operation = (input) => {
     console.log("Stringa valida")
   } catch (e) {
     if (e instanceof TypeError) {
-      console.error("Errore di tipo", error.message);
-    } else console.error("Errore", error.message)
+      console.error("Errore di tipo", e.message);
+    } else console.error("Errore", e.message)
   }
 }
 
