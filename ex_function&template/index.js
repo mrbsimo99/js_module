@@ -107,7 +107,7 @@ const division = (num1, num2) => {
   }
 }
 
-division(10, 5)
+division(50, 5)
 
 // Gestione di più tipi di errori
 
@@ -119,8 +119,8 @@ const operation = (input) => {
       throw new Error("La stringa non può essere vuota");
     }
     console.log("Stringa valida")
-  } catch (error) {
-    if (error instanceof TypeError) {
+  } catch (e) {
+    if (e instanceof TypeError) {
       console.error("Errore di tipo", error.message);
     } else console.error("Errore", error.message)
   }
