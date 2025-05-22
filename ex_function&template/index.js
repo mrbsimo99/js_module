@@ -107,18 +107,41 @@ const division = (num1, num2) => {
   }
 }
 
-division(10,5)
+division(10, 5)
 
 // Gestione di più tipi di errori
 
-const operation = () => {
+const operation = (input) => {
   try {
-    
+    if (typeof input !== "string") {
+      throw new TypeError("Il valore non è una stringa");
+    } else if (input.length === 0) {
+      throw new Error("La stringa non può essere vuota");
+    }
+    console.log("Stringa valida")
   } catch (error) {
-    
+    if (error instanceof TypeError) {
+      console.error("Errore di tipo", error.message);
+    } else console.error("Errore", error.message)
   }
 }
 
-
+operation("1");
 
 // Uso di finally per eseguire codice indipendente dal risultato
+
+const operationCompleted = () => {
+  try {
+    let numero = 1
+    let result = numero.toUpperCase()
+    console.log(result)
+  } catch (error) {
+    console.error("Operazione non valida", error.message)
+  }
+  finally {
+    console.log("L'operazione è stata completata");
+
+  }
+}
+
+operationCompleted();
