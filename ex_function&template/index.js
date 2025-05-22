@@ -111,11 +111,11 @@ division(50, 5)
 
 // Gestione di più tipi di errori
 
-const operation = (input) => {
+const operation = (i) => {
   try {
-    if (typeof input !== "string") {
+    if (typeof i !== "string") {
       throw new TypeError("Il valore non è una stringa");
-    } else if (input.length === 0) {
+    } else if (i.length === 0) {
       throw new Error("La stringa non può essere vuota");
     }
     console.log("Stringa valida")
