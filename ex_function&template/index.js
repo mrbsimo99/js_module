@@ -96,7 +96,7 @@ setTimeout(() => { clearInterval(salutaGianfranco); console.log("Addio Gianfranc
 // Gestione di un errore semplice
 const division = (num1, num2) => {
   try {
-    if (num1 === 0 || num2 === 0) {
+    if (num2 === 0) {
       throw new Error("Non puoi dividere per 0")
 
     }
