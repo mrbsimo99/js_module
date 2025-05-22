@@ -139,7 +139,7 @@ const operationCompleted = () => {
     console.error("Operazione non valida", error.message)
   }
   finally {
-    console.log("L'operazione è stata completata");
+    console.log("L'operazione è stata completata comunque");
 
   }
 }
