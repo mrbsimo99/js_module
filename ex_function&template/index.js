@@ -135,8 +135,8 @@ const operationCompleted = () => {
     let numero = 1
     let result = numero.toUpperCase()
     console.log(result)
-  } catch (error) {
-    console.error("Operazione non valida", error.message)
+  } catch (e) {
+    console.error("Operazione non valida", e.message)
   }
   finally {
     console.log("L'operazione è stata completata comunque");
