@@ -31,15 +31,11 @@ function sottrazione(x, y, sottrai) {
     sottrai(x - y);
 }
 
-function Moltiplica_eSottrai() {
-    moltiplicazione(6, 3, function (moltiplica) {
-        sottrazione(moltiplica, 7, function (sottrai) {
-            console.log(sottrai);
-        });
+moltiplicazione(6, 3, function (moltiplica) {
+    sottrazione(moltiplica, 7, function (sottrai) {
+        console.log(sottrai);
     });
-}
-
-Moltiplica_eSottrai()
+});
 
 // Creare una promessa semplice 
 
