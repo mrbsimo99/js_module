@@ -90,15 +90,7 @@ CatenaPromesseConCondizione.then(r => console.log(r))
 
 // Catena di promesse con gestione degli errori 
 
-let CatenaPromesseErrori = new Promise(function (resolve, reject) {
-    let ok = false
 
-    if (ok) {
-        resolve("Successo");
-    } else {
-        reject("Fallimento");
-    }
-});
 
 // Gestione degli errori con catch
 
