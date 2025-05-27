@@ -63,10 +63,7 @@ simplePromise.catch(e => {
 // Promessa con finally
 let Promessa = new Promise((resolve, reject) => {
     setTimeout(() => resolve("Ciao"), 1000);
-});
-
-Promessa.then(r => console.log(r));
-Promessa.finally(() => console.log("Stop"))
+}).then(r => console.log(r)).finally(() => console.log("Stop"));
 
 // Catena di promesse semplici
 
