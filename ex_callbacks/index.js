@@ -64,3 +64,37 @@ let Promessa = new Promise((resolve, reject) => {
 
 Promessa.then(r => console.log(r));
 Promessa.finally(() => console.log("Stop"))
+
+// Catena di promesse semplici
+
+// Catena di promesse con condizioni
+
+// Catena di promesse con gestione degli errori 
+
+// Gestione degli errori con catch
+
+// Gestione degli errori in una catena di promesse
+
+// Utilizzare Promise.all
+
+// Utilizare Promise.race
+
+// Utilizzare Promise.allSettled
+
+// Funzione asincrona semplice
+
+// Gestione degli errori con try e catch
+
+// Funzioni asincrone in serie
+
+// Eseguire una richiesta GET semplice
+
+// Eseguire una richiesta POST
+
+// Gestione degli errori con async e await
+
+// Compprendere un errore CORS
+
+// Utilizzare un proxy per bypassare CORS
+
+// Utilizzare un'API che supporta CORS
