@@ -67,9 +67,30 @@ Promessa.finally(() => console.log("Stop"))
 
 // Catena di promesse semplici
 
+let CatenaPromesse = new Promise(function (resolve, reject) {
+    setTimeout(() => resolve(10), 1000);
+}).then(function (num) {
+    return num * 2;
+}).then(function (num) {
+    return num + 3;
+}).then(r => console.log(r))
+
 // Catena di promesse con condizioni
 
+let CatenaPromesseConCondizione = new Promise(function (resolve, reject) {
+    setTimeout(() => resolve(9), 500);
+}).then(function (num) {
+    if (num % 2 === 0) { return num * 2 } else { return num * 3 };
+})
+
+CatenaPromesseConCondizione.then(r => console.log(r))
+
 // Catena di promesse con gestione degli errori 
+
+let CatenaPromesseErrori = new Promise(function (resolve,reject) {
+resolve(value);
+reject(error);
+})
 
 // Gestione degli errori con catch
 
