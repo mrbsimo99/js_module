@@ -39,19 +39,22 @@ moltiplicazione(6, 3, function (moltiplica) {
 
 // Creare una promessa semplice 
 
-//let simplePromise = new Promise(function(resolve,reject) {
-//  setTimeout(() => resolve("Ciao"), 1000);
-//});
+let simplePromise = new Promise(function (resolve, reject) {
+    let Err = true;
+    setTimeout(() => {
+        if (Err) {
+            reject(new Error("Qualcosa è andato storto!"));
+        } else {
+            resolve("Ciao");
+        }
+    }, 2000);
+});
 
-//simplePromise.then(
-//   r => console.log(r));
+simplePromise.then(
+    r => console.log(r));
 
 
 // Gestione di una promessa con catch
-
-let simplePromise = new Promise(function (resolve, reject) {
-    setTimeout(() => reject(new Error("")), 2000);
-});
 
 simplePromise.catch(e => {
     console.error("Errore", e.message)
@@ -87,10 +90,15 @@ CatenaPromesseConCondizione.then(r => console.log(r))
 
 // Catena di promesse con gestione degli errori 
 
-let CatenaPromesseErrori = new Promise(function (resolve,reject) {
-resolve(value);
-reject(error);
-})
+let CatenaPromesseErrori = new Promise(function (resolve, reject) {
+    let ok = false
+
+    if (ok) {
+        resolve("Successo");
+    } else {
+        reject("Fallimento");
+    }
+});
 
 // Gestione degli errori con catch
 
