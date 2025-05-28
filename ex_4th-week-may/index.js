@@ -131,9 +131,9 @@ let CatchError = new Promise(function (resolve, reject) {
 // Gestione degli errori con then e catch
 
 let CatenaPromesseBooleano = new Promise(function (resolve, reject) {
-    let Boolean = false;
+    let valore1 = false;
 
-    if (Boolean === true) {
+    if (valore1 === true) {
         resolve("Ottimo");
     } else {
         reject(new Error("Errore"));
@@ -166,7 +166,7 @@ Promise.all([PrimaPromessaAll, SecondaPromessaAll]).then((r) => {
     console.log(r);
 })
 
-// Utilizare Promise.race
+// Utilizzare Promise.race
 
 const Promessa1 = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -231,11 +231,11 @@ asincronaSemplice();
 // Gestione degli errori con try e catch
 
 function GestioneErrori() {
-    let Boolean = true;
+    let valore2 = true;
 
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (Boolean === true) {
+            if (valore2 === true) {
                 resolve("Ottimo");
             } else {
                 reject(new Error("Errore"));
