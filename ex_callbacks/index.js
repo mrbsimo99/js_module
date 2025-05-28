@@ -97,10 +97,35 @@ CatenaPromesseConCondizione.then((r) => console.log(r));
 
 // Catena di promesse con gestione degli errori
 
+let gestioneErrori = new Promise(function (resolve, reject) {
+    setTimeout(() => {
+        resolve(Math.floor(Math.random() * 30));
+    }, 2000)
+}).then(function (num) {
+    if (num > 0 && num <= 20) {
+        return num;
+    } else {
+        throw new Error("Il numero deve essere inferiore a 20");
+    }
+}).then((r) => {
+    console.log("numero:", r);
+});
+
 
 
 // Gestione degli errori con catch
 
+let num = 11;
+
+let CatchError = new Promise(function (resolve, reject) {
+    if (num < 10) {
+        resolve(console.log("Ok"));
+    } else {
+        reject(new Error(""));
+    }
+}).catch((e) => {
+    console.error("Nobody can match this amazing catch", e.message);
+});
 
 
 // Gestione degli errori in una catena di promesse
@@ -140,14 +165,14 @@ const get = {
 }
 
 
-async function getData(url){
+async function getData(url) {
     try {
         const res = await fetch(url, {
             method: 'GET',
             headers: {
-                'Content-Type' : 'application/json'
+                'Content-Type': 'application/json'
             },
-           
+
         });
         const data = await res.json();
         console.log(data)
@@ -170,12 +195,12 @@ const post = {
 }
 
 
-async function postData(url){
+async function postData(url) {
     try {
         const res = await fetch(url, {
             method: 'POST',
             headers: {
-                'Content-Type' : 'application/json'
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(post)
         });
