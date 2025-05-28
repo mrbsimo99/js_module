@@ -150,13 +150,13 @@ let CatenaPromesseBooleano = new Promise(function (resolve, reject) {
 
 // Utilizzare Promise.all
 
-const PrimaPromessaAll = new Promise ((resolve,reject) => {
+const PrimaPromessaAll = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve("Prima")
     }, 1000);
 });
 
-const SecondaPromessaAll = new Promise ((resolve,reject) => {
+const SecondaPromessaAll = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve("Seconda")
     }, 2000);
@@ -175,7 +175,7 @@ const Promessa1 = new Promise((resolve, reject) => {
 });
 const Promessa2 = new Promise((resolve, reject) => {
     setTimeout(() => {
-        resolve("Seconda Promessa");  
+        resolve("Seconda Promessa");
     }, 500);
 });
 
@@ -197,23 +197,23 @@ const SecondPromiseToSettle = new Promise((resolve, reject) => {
         resolve("Seconda")
     }, 2000)
 })
-const ThirdPromiseToSettle = new Promise ((resolve,reject) => {
- setTimeout(() => {
-    reject("Terza")
- })
-},1000)
+const ThirdPromiseToSettle = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        reject("Terza")
+    })
+}, 1000)
 
 const promises = [FirstPromiseToSettle, SecondPromiseToSettle, ThirdPromiseToSettle];
 
-Promise.allSettled(promises).then((results) => 
-results.forEach((r) => console.log(r)),
+Promise.allSettled(promises).then((results) =>
+    results.forEach((r) => console.log(r)),
 );
 
 
 // Funzione asincrona semplice
 
-function dueSecondi () {
-    return new Promise ((resolve) => {
+function dueSecondi() {
+    return new Promise((resolve) => {
         setTimeout(() => {
             resolve("Compaio dopo due secondi");
         }, 2000);
@@ -257,6 +257,32 @@ async function AsincronaConErrori() {
 AsincronaConErrori()
 
 // Funzioni asincrone in serie
+
+function treSecondi() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Compaio dopo tre secondi");
+        }, 3000);
+    });
+}
+
+function quattroSecondi() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Compaio dopo quattro secondi");
+        }, 4000);
+    });
+}
+
+async function AsincroneInSerie() {
+    const r1 = await treSecondi();
+    console.log(r1);
+    const r2 = await quattroSecondi();
+    console.log(r2);
+
+}
+
+AsincroneInSerie();
 
 
 
