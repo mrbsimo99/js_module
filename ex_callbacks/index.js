@@ -150,13 +150,43 @@ let CatenaPromesseBooleano = new Promise(function (resolve, reject) {
 
 // Utilizzare Promise.all
 
+const PrimaPromessaAll = new Promise ((resolve,reject) => {
+    setTimeout(() => {
+        resolve("Prima")
+    }, 1000);
+});
 
+const SecondaPromessaAll = new Promise ((resolve,reject) => {
+    setTimeout(() => {
+        resolve("Seconda")
+    }, 2000);
+});
+
+Promise.all([PrimaPromessaAll, SecondaPromessaAll]).then((r) => {
+    console.log(r);
+})
 
 // Utilizare Promise.race
+
+const Promessa1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Prima Promessa");
+    }, 1000);
+});
+const Promessa2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Seconda Promessa");  
+    }, 500);
+});
+
+Promise.race([Promessa1, Promessa2]).then((value) => {
+    console.log(value);
+})
 
 
 
 // Utilizzare Promise.allSettled
+
 
 
 
