@@ -230,7 +230,31 @@ asincronaSemplice();
 
 // Gestione degli errori con try e catch
 
+function GestioneErrori() {
+    let Boolean = true;
 
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (Boolean === true) {
+                resolve("Ottimo");
+            } else {
+                reject(new Error("Errore"));
+            }
+        }, 3000);
+    })
+}
+
+async function AsincronaConErrori() {
+    try {
+        console.log("waiting");
+        const r = await GestioneErrori();
+        console.log(r);
+    } catch (e) {
+        console.log(e)
+    }
+};
+
+AsincronaConErrori()
 
 // Funzioni asincrone in serie
 
