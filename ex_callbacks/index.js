@@ -347,9 +347,5 @@ postData("https://jsonplaceholder.typicode.com/todos");
 
 
 
-// Gestione degli errori con async e await
-
-
-
 // Comprendere un errore CORS
 
