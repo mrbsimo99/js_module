@@ -187,7 +187,27 @@ Promise.race([Promessa1, Promessa2]).then((value) => {
 
 // Utilizzare Promise.allSettled
 
+const FirstPromiseToSettle = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Prima")
+    }, 1500)
+})
+const SecondPromiseToSettle = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Seconda")
+    }, 2000)
+})
+const ThirdPromiseToSettle = new Promise ((resolve,reject) => {
+ setTimeout(() => {
+    reject("Terza")
+ })
+},1000)
 
+const promises = [FirstPromiseToSettle, SecondPromiseToSettle, ThirdPromiseToSettle];
+
+Promise.allSettled(promises).then((results) => 
+results.forEach((r) => console.log(r)),
+);
 
 
 // Funzione asincrona semplice
