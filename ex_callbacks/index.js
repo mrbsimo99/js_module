@@ -212,7 +212,21 @@ results.forEach((r) => console.log(r)),
 
 // Funzione asincrona semplice
 
+function dueSecondi () {
+    return new Promise ((resolve) => {
+        setTimeout(() => {
+            resolve("Compaio dopo due secondi");
+        }, 2000);
+    });
+}
 
+async function asincronaSemplice() {
+    console.log("waiting");
+    const r = await dueSecondi();
+    console.log(r);
+}
+
+asincronaSemplice();
 
 // Gestione degli errori con try e catch
 
