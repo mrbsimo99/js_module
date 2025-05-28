@@ -100,7 +100,7 @@ CatenaPromesseConCondizione.then((r) => console.log(r));
 let gestioneErrori = new Promise(function (resolve, reject) {
     setTimeout(() => {
         resolve(Math.floor(Math.random() * 30));
-    }, 2000)
+    }, 1000)
 }).then(function (num) {
     if (num > 0 && num <= 20) {
         return num;
@@ -128,7 +128,7 @@ let CatchError = new Promise(function (resolve, reject) {
 });
 
 
-// Gestione degli errori in una catena di promesse
+// Gestione degli errori con then e catch
 
 let CatenaPromesseBooleano = new Promise(function (resolve, reject) {
     let Boolean = false;
@@ -143,6 +143,8 @@ let CatenaPromesseBooleano = new Promise(function (resolve, reject) {
 }).catch((e) => {
     console.error(e.message)
 })
+
+// Gestione degli errori in una catena di promesse
 
 
 
