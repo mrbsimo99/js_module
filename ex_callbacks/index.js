@@ -130,6 +130,20 @@ let CatchError = new Promise(function (resolve, reject) {
 
 // Gestione degli errori in una catena di promesse
 
+let CatenaPromesseBooleano = new Promise(function (resolve, reject) {
+    let Boolean = false;
+
+    if (Boolean === true) {
+        resolve("Ottimo");
+    } else {
+        reject(new Error("Errore"));
+    }
+}).then((message) => {
+    console.log(message);
+}).catch((e) => {
+    console.error(e.message)
+})
+
 
 
 // Utilizzare Promise.all
