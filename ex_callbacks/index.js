@@ -117,17 +117,6 @@ CatenaPromesseConCondizione.then((r) => console.log(r));
 
 // Eseguire una richiesta GET semplice
 
-<<<<<<< HEAD
-// Eseguire una richiesta POST
-
-// Gestione degli errori con async e await
-
-// Compprendere un errore CORS
-
-// Utilizzare un proxy per bypassare CORS
-
-// Utilizzare un'API che supporta CORS
-=======
 const get = {
     userId: 0,
     id: '',
@@ -152,6 +141,8 @@ async function getData(url){
 }
 
 getData("https://jsonplaceholder.typicode.com/albums");
+
+
 
 // Eseguire una richiesta POST
 
@@ -183,7 +174,17 @@ postData("https://jsonplaceholder.typicode.com/todos");
 
 // Gestione degli errori con async e await
 
+// Compprendere un errore CORS
+
+// Utilizzare un proxy per bypassare CORS
+
+// Utilizzare un'API che supporta CORS
+
+
+
+// Gestione degli errori con async e await
+
 
 
 // Comprendere un errore CORS
->>>>>>> aeb35f6 (complete get and post ex)
+
