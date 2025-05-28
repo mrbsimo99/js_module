@@ -97,9 +97,15 @@ CatenaPromesseConCondizione.then((r) => console.log(r));
 
 // Catena di promesse con gestione degli errori
 
+
+
 // Gestione degli errori con catch
 
+
+
 // Gestione degli errori in una catena di promesse
+
+
 
 // Utilizzare Promise.all
 
@@ -107,13 +113,23 @@ CatenaPromesseConCondizione.then((r) => console.log(r));
 
 // Utilizare Promise.race
 
+
+
 // Utilizzare Promise.allSettled
+
+
 
 // Funzione asincrona semplice
 
+
+
 // Gestione degli errori con try e catch
 
+
+
 // Funzioni asincrone in serie
+
+
 
 // Eseguire una richiesta GET semplice
 
@@ -173,12 +189,6 @@ async function postData(url){
 postData("https://jsonplaceholder.typicode.com/todos");
 
 // Gestione degli errori con async e await
-
-// Compprendere un errore CORS
-
-// Utilizzare un proxy per bypassare CORS
-
-// Utilizzare un'API che supporta CORS
 
 
 
