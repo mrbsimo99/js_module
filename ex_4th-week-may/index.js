@@ -346,4 +346,61 @@ postData("https://jsonplaceholder.typicode.com/todos");
 
 // Gestione degli errori con async e await
 
+const API_URL = "https://jsonplaceholder.typicode.com/posts"
 
+const fetchData = async () => {
+    try {
+        const res = await fetch(API_URL, {
+            method: "GET",
+        });
+        if (res.ok) {
+            const data = await res.json();
+            console.log(data);
+        } else {
+            throw new Error("Internal server error")
+        }
+    } catch (e) {
+        console.log("Fetch error", e)
+    }
+}
+   
+fetchData();
+
+
+/*  const img = document.querySelector('img');
+const API_URL = "https://api.giphy.com/v1/gifs/translate?api_key=x3iWFOOyqHTmvY5rxLc2tI858XU7N755&s=dogs"
+
+const fetchData = async () => {
+    try {
+        const res = await fetch(API_URL, {
+            method: "GET",
+            mode: "cors"
+        });
+        if (res.ok) {
+            const data = await res.json();
+            img.src = data.data.images.original.url;
+        } else {
+            throw new Error("Internal server error")
+        }
+    } catch (e) {
+        console.log("Fetch error", e)
+    }
+ } 
+
+ fetchData();
+*/ 
+   
+// Comprendere un errore CORS
+
+async function fetchCors(url) {
+
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        console.log(data);
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+fetchCors("http://example.com");
