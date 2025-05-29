@@ -235,7 +235,7 @@ function GestioneErrori() {
 
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            if (valore2 === true) {
+            if (true) {
                 resolve("Ottimo");
             } else {
                 reject(new Error("Errore"));
@@ -243,6 +243,7 @@ function GestioneErrori() {
         }, 3000);
     })
 }
+
 
 async function AsincronaConErrori() {
     try {
