@@ -38,13 +38,13 @@ function deleteCookie(name) {
 }
 
 setCookie("user", "Giovanni", { secure: true, 'max-age': 3600 });
-console.log("Creazione cookie", document.cookie)
+console.log("Cookies", document.cookie)
 
 deleteCookie("user");
-console.log("Cancellazione cookie:", document.cookie);
+console.log("Deleted cookies", document.cookie);
 
 setCookie("user", "Simone", { secure: true, 'max-age': 3600 });
-console.log("Creazione cookie", document.cookie)
+console.log("Cookies", document.cookie)
 
 
 // Utilizzare il localStorage
