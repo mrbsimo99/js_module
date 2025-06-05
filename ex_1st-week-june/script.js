@@ -121,28 +121,14 @@ $text.innerHTML = $button;
 const ul = document.createElement("ul");
 
 // Crea i list items
-let h2 = document.createElement("h2");
-let li1 = document.createElement("li");
-let li2 = document.createElement("li");
-let li3 = document.createElement("li");
-let li4 = document.createElement("li");
-let li5 = document.createElement("li")
+// Usare un ciclo forEach per creare una lista
 
-h2.innerText = "Lista frutta";
-li1.innerText = "Banana";
-li2.innerText = "Mela";
-li3.innerText = "Pera";
-li4.innerText = "Ananas";
-li5.innerText = "Kiwi";
+const frutta = ["Banana", "Mela", "Pera", "Ananas", "Kiwi"];
+const container = document.querySelector(".container");
 
-ul.appendChild(li1);
-ul.appendChild(li2);
-ul.appendChild(li3);
-ul.appendChild(li4);
-ul.appendChild(li5);
-
-document.body.appendChild(h2);
-document.body.appendChild(ul);
+frutta.forEach((item) => {
+  container.innerHTML += `<li>${item}</li>`;
+});
 
 // Submit
 
