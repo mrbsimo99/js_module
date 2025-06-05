@@ -121,13 +121,14 @@ $text.innerHTML = $button;
 const ul = document.createElement("ul");
 
 // Crea i list items
-
+let h2 = document.createElement("h2");
 let li1 = document.createElement("li");
 let li2 = document.createElement("li");
 let li3 = document.createElement("li");
 let li4 = document.createElement("li");
 let li5 = document.createElement("li")
 
+h2.innerText = "Lista frutta";
 li1.innerText = "Banana";
 li2.innerText = "Mela";
 li3.innerText = "Pera";
@@ -140,6 +141,7 @@ ul.appendChild(li3);
 ul.appendChild(li4);
 ul.appendChild(li5);
 
+document.body.appendChild(h2);
 document.body.appendChild(ul);
 
 // Submit
