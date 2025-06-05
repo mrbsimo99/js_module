@@ -7,33 +7,33 @@ date = date.toUTCString();
 document.cookie = "user=John; expires=" + date;
 
 function setCookie(name, value, options = {}) {
-    options = {
-        path: "./",
-        ...options,
-    };
+  options = {
+    path: "./",
+    ...options,
+  };
 
-    if (options.expires instanceof Date) {
-        options.expires = options.expires.toUTCString();
+  if (options.expires instanceof Date) {
+    options.expires = options.expires.toUTCString();
+  }
+
+  let updatedCookie =
+    encodeURIComponent(name) + "=" + encodeURIComponent(value);
+
+  for (let optionKey in options) {
+    updatedCookie += "; " + optionKey;
+    let optionValue = options[optionKey];
+    if (optionValue !== true) {
+      updatedCookie += "=" + optionValue;
     }
+  }
 
-    let updatedCookie =
-        encodeURIComponent(name) + "=" + encodeURIComponent(value);
-
-    for (let optionKey in options) {
-        updatedCookie += "; " + optionKey;
-        let optionValue = options[optionKey];
-        if (optionValue !== true) {
-            updatedCookie += "=" + optionValue;
-        }
-    }
-
-    document.cookie = updatedCookie;
+  document.cookie = updatedCookie;
 }
 
 function deleteCookie(name) {
-    setCookie(name, "", {
-        "max-age": -1,
-    });
+  setCookie(name, "", {
+    "max-age": -1,
+  });
 }
 
 setCookie("user", "Giovanni", { secure: true, "max-age": 3600 });
@@ -126,16 +126,19 @@ let li1 = document.createElement("li");
 let li2 = document.createElement("li");
 let li3 = document.createElement("li");
 let li4 = document.createElement("li");
+let li5 = document.createElement("li")
 
 li1.innerText = "Banana";
 li2.innerText = "Mela";
 li3.innerText = "Pera";
-li4.innerHTML = "Ananas";
+li4.innerText = "Ananas";
+li5.innerText = "Kiwi";
 
 ul.appendChild(li1);
 ul.appendChild(li2);
 ul.appendChild(li3);
 ul.appendChild(li4);
+ul.appendChild(li5);
 
 document.body.appendChild(ul);
 
@@ -147,10 +150,10 @@ const $inputSurname = document.querySelector("#cognome");
 const $message = document.querySelector("#message");
 
 $form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    if (!$inputName.value.trim() || !$inputSurname.value.trim()) {
-        alert("Tutti i campi sono obbligatori")
-    } else {
-        $message.innerText = `Ciao ${$inputName.value} ${$inputSurname.value}`;
-    }
+  event.preventDefault();
+  if (!$inputName.value.trim() || !$inputSurname.value.trim()) {
+    alert("Tutti i campi sono obbligatori");
+  } else {
+    $message.innerText = `Ciao ${$inputName.value} ${$inputSurname.value}`;
+  }
 });
